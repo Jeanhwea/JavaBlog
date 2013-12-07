@@ -50,7 +50,7 @@
 	
 		<table>
 	<tr>
-		<td><p>好友姓名 -> </p></td>
+		<td><p>好友姓名 ： </p></td>
 		<td><strong><%= it.getF2_name()%></strong></td>
 	</tr>
 	<tr>
