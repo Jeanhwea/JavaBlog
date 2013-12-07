@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+D:\Users\tatora\blog\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2768356007.index
+\Blog\src
