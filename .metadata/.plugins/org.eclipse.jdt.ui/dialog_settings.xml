@@ -4,6 +4,12 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="7" key="index"/>
 	</section>
 </section>
