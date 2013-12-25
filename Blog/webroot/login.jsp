@@ -20,6 +20,12 @@
     		<td>密  码: </td>
     		<td><input id="login_password" type = "password" name="login_password"></td>
     	</tr>
+    	<tr>     <td></td>  
+    	<td align="left">
+    	<input id="usertype" name="usertype" type="radio" value="user" checked="checked" />
+            <span class="STYLE7">普通用户&nbsp;&nbsp;
+          <input id="usertype" name="usertype" type="radio" value="admin" />管理员</span></td>
+    	</tr>
     	<tr>
             <td><input type = "submit" name="submit" value= "登陆"></td>
             <td></td>

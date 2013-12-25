@@ -38,15 +38,16 @@
 <table>
 	<tr><td><p><a href="userhome.jsp">HOME</a></p></td></tr>
 </table>
-<table>
 	<form id="add_friend" method="post" action="/Blog/userdo?param=searchFriend">
+<table>
 			<tr>
 				<td>输入好友昵称：</td>
 				<td> <input id="friend_name" type="text" name="friend_name"> </td>
 				<td> <input id="add" type="submit" value="查找"></td>
 			</tr>
-	</form>
+
 </table>
+	</form>
 <% 
 	ArrayList<User> ul = (ArrayList<User>) session.getAttribute("friendlist");
 	boolean find = false;

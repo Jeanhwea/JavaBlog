@@ -6,9 +6,11 @@
 <% 
 	String username = request.getParameter("login_name");
 	String password = request.getParameter("login_password");
+	String usertype = request.getParameter("usertype");
 
 	System.out.println("login_name => " + username);
 	System.out.println("login_password => " + password);
+	System.out.println("User type => " + usertype);
 	Connection con = DbCon.getDbConn();
 	Statement stmt = con.createStatement();
 	String query = "select * from user where user_name='"
@@ -19,6 +21,7 @@
 		System.out.println("passed check... login");
 		session.setAttribute("login_name",username);
 		session.setAttribute("login_password",password);
+		session.setAttribute("usertype", usertype);
 		response.sendRedirect("userhome.jsp");
 	} else {
 		System.out.println("failed to pass check... ");
