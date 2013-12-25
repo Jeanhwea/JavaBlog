@@ -7,27 +7,23 @@
 	String username = request.getParameter("login_name");
 	String password = request.getParameter("login_password");
 	String usertype = request.getParameter("usertype");
-
+	session.setAttribute("login_name",username);
+	session.setAttribute("login_password",password);
+	session.setAttribute("usertype", usertype);
 	System.out.println("login_name => " + username);
 	System.out.println("login_password => " + password);
 	System.out.println("User type => " + usertype);
-	Connection con = DbCon.getDbConn();
-	Statement stmt = con.createStatement();
-	String query = "select * from user where user_name='"
-			+ username + "' and user_pwd = '" + password + "'";
-	System.out.println(query);
-	ResultSet rs = stmt.executeQuery(query);
-	if (rs.next()) {
-		System.out.println("passed check... login");
-		session.setAttribute("login_name",username);
-		session.setAttribute("login_password",password);
-		session.setAttribute("usertype", usertype);
+	
+	switch (Integer.parseInt(usertype)) {
+	case 1:
+		System.out.println("$$$$$$");	
 		response.sendRedirect("userhome.jsp");
-	} else {
-		System.out.println("failed to pass check... ");
-		response.sendRedirect("login_fail.jsp");
+		break;
+	case 2:
+		System.out.println("%%%%%%");
+		response.sendRedirect("admin_home.jsp");
+		break;
+	default:
+		break;
 	}
-	rs.close();
-	stmt.close();
-	con.close();
 %>

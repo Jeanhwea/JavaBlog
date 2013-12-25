@@ -22,9 +22,9 @@
     	</tr>
     	<tr>     <td></td>  
     	<td align="left">
-    	<input id="usertype" name="usertype" type="radio" value="user" checked="checked" />
+    	<input id="usertype" name="usertype" type="radio" value="1" checked="checked" />
             <span class="STYLE7">普通用户&nbsp;&nbsp;
-          <input id="usertype" name="usertype" type="radio" value="admin" />管理员</span></td>
+          <input id="usertype" name="usertype" type="radio" value="2" />管理员</span></td>
     	</tr>
     	<tr>
             <td><input type = "submit" name="submit" value= "登陆"></td>
