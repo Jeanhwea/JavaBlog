@@ -37,6 +37,46 @@
 <title>Admin</title>
 </head>
 <body>
+<% 
+	AdminDao ud1 = new AdminDao();
+	ArrayList<User> ul = ud1.searchUsersByUser("");
+	boolean find = false;
+	if (ul != null) {
+		Iterator<User> its = ul.iterator();
+		while (its.hasNext()) {
+			User it = its.next();
+			find = true;
+%>
+		<table>
+	<tr>
+		<td><p>用户姓名 ： </p></td>
+		<td><strong><%= it.getName()%></strong></td>
+	</tr>
+	<tr><td>
+		<form method="post" action="/Blog/admindo?param=delUser">	
+<%="<input id=\"frix_" + it.getName() + "\" type=\"hidden\" name=\"uname\" value=\""
+					+ it.getName() + "\">"%>
+<%="<input id=\"frixx_" + it.getName() + "\" type=\"submit\" " + "value=\"删除\">"%>
+		</form></td>
+	</tr>
+	<tr>	
+		<form method="post" action="/Blog/admindo?param=changePwd">	
+	
+<%="<input id=\"frixp_" + it.getName() + "\" type=\"hidden\" name=\"uname\" value=\""
+					+ it.getName() + "\">"%>
+<td>
+<%="<input id=\"frixpx_" + it.getName() + "\" type=\"submit\" " + "value=\"改密码\">"%>
+</td>
+<td>
+<%="<input id=\"frixpx_" + it.getName() + "\" type=\"text\" name=\"password\" " + "value=\"123\">"%>
+</td>
+		</form>
 
+	</tr>
+	<hr/>
+		</table>
+<%		} %>
+<%  } %>
+<table><hr/></table> 
 </body>
 </html>
